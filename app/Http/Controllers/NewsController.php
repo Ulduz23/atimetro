@@ -8,29 +8,10 @@ use Response;
 
 class NewsController extends Controller
 {
-    public function list(Request $request){
-        $lang = $request->segment(1); 
+    public function list(){
+        $all = News::get();
 
-        if ($lang === 'tr') {
-            $all = News::select('id',
-            'title_tr as title_tr',
-            'description_tr as description_tr',
-            'content_tr as content_tr', 
-            'status', 
-            'created_at',
-            'updated_at')
-            ->get();
-        } else {
-            $all = News::select('id',
-            'title_en as title_en',
-            'description_en as description_en',
-             'content_en as content_en', 'status', 
-             'created_at',
-             'updated_at')
-             ->get();
-        }
-
-        return response()->json($all);
+        return Response::json($all);
     }
 
 

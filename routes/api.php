@@ -18,6 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('{lang}/list', [NewsController::class, 'list']);
+Route::get('news', [NewsController::class, 'list']);
 Route::post('add',[NewsController::class,'add']);
 
