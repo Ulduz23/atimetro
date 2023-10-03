@@ -2,7 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NewsController;
+use App\Http\Controllers\Api\NewsController;
+use App\Http\Controllers\Api\ContactController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,6 +20,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('{lang}/list', [NewsController::class, 'list']);
-Route::post('add',[NewsController::class,'add']);
+Route::get('news', [NewsController::class, 'list']);
+Route::post('newsadd',[NewsController::class,'add']);
 
+
+Route::get('contact', [ContactController::class, 'list']);
+Route::post('contactadd', [ContactController::class, 'add']);
