@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\ContactController;
+use App\Http\Controllers\Api\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,7 @@ Route::post('newsadd',[NewsController::class,'add']);
 
 Route::get('contact', [ContactController::class, 'list']);
 Route::post('contactadd', [ContactController::class, 'add']);
+
+
+Route::get('project', [ProjectController::class, 'list']);
+Route::post('projectadd', [ProjectController::class, 'add']);
