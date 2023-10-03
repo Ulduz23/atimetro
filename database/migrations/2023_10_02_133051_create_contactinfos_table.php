@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('contactinfos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('adress_tr');
-            $table->string('adress_en');
+            $table->string('adress');
             $table->string('phone');
             $table->string('email');
             $table->dateTime('created_at')->useCurrent();
