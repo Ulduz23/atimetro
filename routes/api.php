@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\SocialmediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,6 @@ Route::post('contactadd', [ContactController::class, 'add']);
 
 Route::get('project', [ProjectController::class, 'list']);
 Route::post('projectadd', [ProjectController::class, 'add']);
+
+Route::get('social', [SocialmediaController::class, 'list']);
+Route::post('socialadd', [SocialmediaController::class, 'add']);

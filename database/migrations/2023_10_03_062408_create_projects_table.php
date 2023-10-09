@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->longtext('content');
+            $table->string('title_tr');
+            $table->string('title_en');
+            $table->longtext('content_tr');
+            $table->longtext('content_en');
             $table->string('image');
             $table->boolean('status')->default(false);
             $table->dateTime('created_at')->useCurrent();

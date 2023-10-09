@@ -11,15 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('news', function (Blueprint $table) {
+        Schema::create('socialmedia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title_tr');
-            $table->string('title_en');
-            $table->text('description_tr');
-            $table->text('description_en');
-            $table->longtext('content_tr');
-            $table->longtext('content_en');
-            $table->longtext('image');
+            $table->string('facebook');
+            $table->string('instagram');
+            $table->longtext('twitter');
+            $table->longtext('youtube');
             $table->boolean('status')->default(false);
             $table->dateTime('created_at')->useCurrent();
             $table->dateTime('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('news');
+        Schema::dropIfExists('socialmedia');
     }
 };

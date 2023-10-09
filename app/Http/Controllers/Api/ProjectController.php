@@ -19,19 +19,22 @@ class ProjectController extends Controller
 
     public function add(Request $request){
         $news = new Projects;
-        $news->title = $request->title;
-        $news->content = $request->content;
+        $news->title_tr = $request->title_tr;
+        $news->title_en = $request->title_en;
+        $news->content_tr = $request->content_tr;
+        $news->content_en = $request->content_en;
 
-        // $image = $request->file('image');
-        // if($request->hasFile('image')){
-        //     $newname = time().'.'.$image->getClientOriginalExtension();
-        //     $image->move(public_path('/uploads/project'),$newname);
-        //     return response()->json($newname);
-        // }
-        // else{
-        //     return response()->json('error, not image');
-        // }
 
+        $image = $request->file('image');
+        if($request->hasFile('image')){
+            $newname = time().'.'.$image->getClientOriginalExtension();
+            $image->move(public_path('/uploads/project'),$newname);
+        }
+        else{
+            return response()->json('error, not image');
+        }
+        
+        $news->image = $newname;
 
         
 
@@ -47,7 +50,7 @@ class ProjectController extends Controller
         // $imageNames = rtrim($imageNames, ',');
 
         // $news->image = $imageNames;
-        // $news->save();
+        $news->save();
 
         return ["Result" => "Success"];
 
