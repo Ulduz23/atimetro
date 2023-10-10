@@ -11,6 +11,7 @@ use App\Http\Controllers\Api\StatistikaController;
 use App\Http\Controllers\Api\AboutController;
 use App\Http\Controllers\Api\GalleryController;
 use App\Http\Controllers\Api\StationController;
+use App\Http\Controllers\Api\BimController;
 
 
 
@@ -49,3 +50,10 @@ Route::post('galleryadd', [GalleryController::class, 'add']);
 
 Route::get('station', [StationController::class, 'list']);
 Route::post('stationadd', [StationController::class, 'add']);
+
+
+Route::get('bim', [BimController::class, 'list']);
+Route::post('bimadd', [BimController::class, 'add']);
+
+Route::get('bimimgs', [BimController::class, 'imgs']);
+Route::post('bimimgsadd', [BimController::class, 'imgadd']);
