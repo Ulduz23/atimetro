@@ -9,17 +9,9 @@ use App\Http\Controllers\Api\SocialmediaController;
 use App\Http\Controllers\Api\HeroİnformationController;
 use App\Http\Controllers\Api\StatistikaController;
 use App\Http\Controllers\Api\AboutController;
+use App\Http\Controllers\Api\GalleryController;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
@@ -49,3 +41,6 @@ Route::post('statistikaadd', [StatistikaController::class, 'add']);
 
 Route::get('about', [AboutController::class, 'list']);
 Route::post('aboutadd', [AboutController::class, 'add']);
+
+Route::get('gallery', [GalleryController::class, 'list']);
+Route::post('galleryadd', [GalleryController::class, 'add']);
