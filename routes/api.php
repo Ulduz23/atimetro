@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\NewsController;
 use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\SocialmediaController;
+use App\Http\Controllers\Api\HeroİnformationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +36,7 @@ Route::post('projectadd', [ProjectController::class, 'add']);
 
 Route::get('social', [SocialmediaController::class, 'list']);
 Route::post('socialadd', [SocialmediaController::class, 'add']);
+
+
+Route::get('info', [HeroİnformationController::class, 'list']);
+Route::post('infoadd', [HeroİnformationController::class, 'add']);
