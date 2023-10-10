@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Statistika extends Model
 {
     use HasFactory;
+    protected $table = 'statistikas';
 }

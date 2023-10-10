@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Bim extends Model
 {
     use HasFactory;
+    protected $table = 'bim';
 }
