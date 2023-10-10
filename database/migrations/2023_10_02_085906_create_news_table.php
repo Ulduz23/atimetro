@@ -13,9 +13,12 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->text('description');
-            $table->longtext('content');
+            $table->string('title_tr');
+            $table->string('title_en');
+            $table->text('description_tr');
+            $table->text('description_en');
+            $table->longtext('content_tr');
+            $table->longtext('content_en');
             $table->longtext('image');
             $table->boolean('status')->default(false);
             $table->dateTime('created_at')->useCurrent();
