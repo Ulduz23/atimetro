@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\SocialmediaController;
 use App\Http\Controllers\Api\HeroİnformationController;
 use App\Http\Controllers\Api\StatistikaController;
+use App\Http\Controllers\Api\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,3 +46,6 @@ Route::post('infoadd', [HeroİnformationController::class, 'add']);
 
 Route::get('statistika', [StatistikaController::class, 'list']);
 Route::post('statistikaadd', [StatistikaController::class, 'add']);
+
+Route::get('about', [AboutController::class, 'list']);
+Route::post('aboutadd', [AboutController::class, 'add']);
