@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\HeroİnformationController;
 use App\Http\Controllers\Api\StatistikaController;
 use App\Http\Controllers\Api\AboutController;
 use App\Http\Controllers\Api\GalleryController;
+use App\Http\Controllers\Api\StationController;
 
 
 
@@ -44,3 +45,7 @@ Route::post('aboutadd', [AboutController::class, 'add']);
 
 Route::get('gallery', [GalleryController::class, 'list']);
 Route::post('galleryadd', [GalleryController::class, 'add']);
+
+
+Route::get('station', [StationController::class, 'list']);
+Route::post('stationadd', [StationController::class, 'add']);
