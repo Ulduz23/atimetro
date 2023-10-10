@@ -12,6 +12,7 @@ use App\Http\Controllers\Api\AboutController;
 use App\Http\Controllers\Api\GalleryController;
 use App\Http\Controllers\Api\StationController;
 use App\Http\Controllers\Api\BimController;
+use App\Http\Controllers\Api\DocsController;
 
 
 
@@ -57,3 +58,7 @@ Route::post('bimadd', [BimController::class, 'add']);
 
 Route::get('bimimgs', [BimController::class, 'imgs']);
 Route::post('bimimgsadd', [BimController::class, 'imgadd']);
+
+
+Route::get('docs', [DocsController::class, 'list']);
+Route::post('docsadd', [DocsController::class, 'add']);
